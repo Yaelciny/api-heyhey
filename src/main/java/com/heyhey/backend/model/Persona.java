@@ -1,4 +1,4 @@
-package com.heyhey.backend.controller;
+package com.heyhey.backend.model;
 
 //Importacion todas las herramientas de jakarta
 import jakarta.persistence.*;
