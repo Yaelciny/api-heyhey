@@ -22,4 +22,14 @@ public class TareasEnviadasController {
     public TareasEnviadas postTarea(@RequestBody TareasEnviadas tareasEnviadas){
         return tareasEnviadasService.guardarTareasEnviadas(tareasEnviadas);
     }
+
+    @GetMapping("/estado/{estado}")
+    public List<TareasEnviadas> getAllEstado(@PathVariable Integer estado){
+        return tareasEnviadasService.obtenerPorEstado(estado);
+    }
+
+    @GetMapping("/empleado/{idEmpleado}")
+    public List<TareasEnviadas> getAllEmpleado(@PathVariable Integer idEmpleado){
+        return tareasEnviadasService.obtenerPorEmpleado(idEmpleado);
+    }
 }

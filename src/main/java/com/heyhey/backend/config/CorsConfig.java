@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**") // Aplica el permiso a todas tus rutas
-                .allowedOrigins("http://localhost:3001") // Aquí le damos acceso
+                .allowedOrigins("http://localhost:3000") // Aquí le damos acceso
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Permisos de acciones
                 .allowedHeaders("*") // Permite enviar cualquier tipo de dato
                 .allowCredentials(true);

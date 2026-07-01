@@ -27,4 +27,12 @@ public class TareasEnviadasService {
     public void elimminarTareaEnviada(Integer id){
         tareasEnviadasRepository.deleteById(id);
     }
+
+    public List<TareasEnviadas> obtenerPorEstado(Integer estado){
+        return tareasEnviadasRepository.findByEstado(estado);
+    }
+
+    public List<TareasEnviadas> obtenerPorEmpleado(Integer idEmpleado){
+        return tareasEnviadasRepository.findByEmpleado_IdEmpleado(idEmpleado);
+    }
 }
