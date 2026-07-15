@@ -18,7 +18,7 @@ public class TareasEnviadas {
     @Column(name = "id_envio")
     private Integer idEnvio;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_tarea", referencedColumnName = "id_tarea", nullable = false)
     private Tarea tarea;
 

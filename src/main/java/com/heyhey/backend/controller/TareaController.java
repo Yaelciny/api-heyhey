@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 
 @RestController
 @RequestMapping("/tarea")
-@CrossOrigin(origins = "*") // Importante para evitar bloqueos de red con Next.js
 public class TareaController {
 
     @Autowired

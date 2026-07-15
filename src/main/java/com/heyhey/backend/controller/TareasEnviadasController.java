@@ -32,4 +32,14 @@ public class TareasEnviadasController {
     public List<TareasEnviadas> getAllEmpleado(@PathVariable Integer idEmpleado){
         return tareasEnviadasService.obtenerPorEmpleado(idEmpleado);
     }
+
+    @PutMapping("/{id}/estado")
+    public TareasEnviadas actualizarEstado(@PathVariable("id") Integer idEnvio, @RequestBody Integer nuevoEstado) {
+        TareasEnviadas tarea = tareasEnviadasService.obtenerId(idEnvio);
+
+        // Actualizamos el estado (1, 2 o 3)
+        tarea.setEstado(nuevoEstado);
+
+        return tareasEnviadasService.guardarTareasEnviadas(tarea);
+    }
 }
